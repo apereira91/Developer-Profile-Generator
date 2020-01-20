@@ -1,0 +1,27 @@
+{
+  "name": "developer-profile-generator",
+  "version": "1.0.0",
+  "description": "Create a command-line application that dynamically generates a PDF profile from a GitHub username. The application will be invoked with the following command:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apereira91/Developer-Profile-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apereira91/Developer-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/apereira91/Developer-Profile-Generator#readme",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "github": "^14.0.0",
+    "github-scraper": "^6.8.0",
+    "html-pdf": "^2.2.0",
+    "inquirer": "^7.0.3",
+    "scraper": "0.0.9"
+  }
+}
