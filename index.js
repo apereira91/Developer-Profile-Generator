@@ -59,23 +59,10 @@ function promptUser() {
             type: "list",
             message: "Choose your favorite color",
             name: "color",
-            choices: [
-                {
-                    name: "Green",
-                    value: "green",
-                },
-                {
-                    name: "Blue",
-                    value: "blue",
-                },
-                {
-                    name: "Pink",
-                    value: "pink",
-                },
-                {
-                    name: "Red",
-                    value: "red",
-                },
+            choices: ["green",
+              "blue",
+              "pink",
+              "red"
             ]
         }
     ])
@@ -84,11 +71,10 @@ function promptUser() {
             color,
         }) {
             const queryUrl = `https://api.github.com/users/${username}`;
-            //console.log(username);
-            //console.log(color);
+            console.log(username);
+            console.log(color);
             userFavColor = color;
 
-            const queryUrl2 = `https://api.github.com/users/${username}/starred`
 
             axios.get(queryUrl).then(function (result) {
                 profileImage = result.data.avatar_url;
@@ -106,7 +92,7 @@ function promptUser() {
 
             github(username, function (err, data) {
                 const html = generateHTML2(data.stars);
-                return appendFileAsync("index.html, html");
+                return appendFileAsync("index.html", html);
             });
         })
         .then(function () {
